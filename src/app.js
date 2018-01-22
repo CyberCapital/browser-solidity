@@ -620,6 +620,9 @@ function run () {
     },
     getCompilationResult: () => {
       return compiler.lastCompilationResult
+    },
+    newAccount: (pass, cb) => {
+      udapp.newAccount(pass, cb)
     }
   }
   var rhpEvents = {
