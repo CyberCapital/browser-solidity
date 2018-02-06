@@ -271,6 +271,7 @@ Please make a backup of your contracts and start using https://remix.ethereum.or
   var udappUI = new UniversalDAppUI(udapp)
 
   udapp.reset({}, transactionContextAPI)
+  udappUI.reset()
   udapp.event.register('debugRequested', this, function (txResult) {
     startdebugging(txResult.transactionHash)
   })
@@ -619,6 +620,7 @@ Please make a backup of your contracts and start using https://remix.ethereum.or
     },
     resetDapp: (contracts) => {
       udapp.reset(contracts, transactionContextAPI)
+      udappUI.reset()
     },
     setOptimize: (optimize, runCompilation) => {
       compiler.setOptimize(optimize)
