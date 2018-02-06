@@ -269,7 +269,6 @@ Please make a backup of your contracts and start using https://remix.ethereum.or
   })
 
   var udappUI = new UniversalDAppUI(udapp)
-  console.dir(udappUI)
 
   udapp.reset({}, transactionContextAPI)
   udapp.event.register('debugRequested', this, function (txResult) {
@@ -583,6 +582,9 @@ Please make a backup of your contracts and start using https://remix.ethereum.or
     },
     udapp: () => {
       return udapp
+    },
+    udappUI: () => {
+      return udappUI
     },
     switchFile: function (path) {
       fileManager.switchFile(path)
