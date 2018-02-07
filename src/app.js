@@ -498,6 +498,8 @@ function run () {
     filesProviders['browser'].get(previouslyOpenedFile, (error, content) => {
       if (!error && content) fileManager.switchFile(previouslyOpenedFile)
     })
+  } else {
+    fileManager.switchFile()
   }
 
   // ----------------- Renderer -----------------
